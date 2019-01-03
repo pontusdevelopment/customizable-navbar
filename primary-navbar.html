@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Pontus Gavelin">
+
+    <title>Pontus' own Navbar</title>
+
+<link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <!-- Setting up inital navbar nav -->
+    <nav class="navbar" id="navbar">
+        <!-- Making sure the button will be able to toggle and also hide on bigger screen sizes -->
+        <span class="open-slide">
+            <a href="#" onclick="openSlideMenu()">
+                <!-- Creating the "hamburger" using svg to draw three 2px thin lines 7px away from each other -->
+                <svg width="30" height="30">
+                    <path d="M0,5 30,5" stroke="#000" stroke-width="2" class="menu-line"/>
+                    <path d="M0,12 30,12" stroke="#000" stroke-width="2" class="menu-line"/>
+                    <path d="M0,19 30,19" stroke="#000" stroke-width="2" class="menu-line"/>
+                </svg>
+            </a>
+        </span>
+        <!-- Setting up the actual items (buttons) in the navbar -->
+        <ul class="navbar-navitems">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About Me</a></li>
+        </ul>
+    </nav>
+    <!-- Creating the menu that opens up when clicking the "hamburger" -->
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="menu-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Blog</a>
+        <a href="#">About Me</a>
+    </div>
+    <div id="main">
+        <h1>Testing text to check that menu pushes main screen to the right</h1>
+    </div>
+<script src="navbar.js"></script>
+</body>
+</html>
